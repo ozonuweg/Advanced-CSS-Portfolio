@@ -1,0 +1,56 @@
+// Variables
+$ticker-background-color: #000;
+$ticker-font-color: #fff;
+$ticker-font-hover-color: red;
+$ticker-duration: 32s;
+$break-small: 599px;
+
+@keyframes ticker {
+	0% {
+		transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		transform: translate3d(-400%, 0, 0);
+	}
+}
+body {
+	text-align: center;
+}
+a {
+	color: $ticker-font-color;
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+}
+.ticker-wrap {
+	overflow: hidden;
+	background-color: $ticker-background-color;
+	text-align: center;
+	margin: auto;
+}
+.move-ticker {
+	display: flex;
+	animation: ticker linear $ticker-duration infinite;
+}
+.ticker-item {
+	flex-shrink: 0;
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: center;
+	a {
+		&:hover {
+			color: $ticker-font-hover-color;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+	}
+}
+@media only screen and (min-width: $break-small) {
+	.ticker-wrap {
+		width: 750px;
+	}
+	.ticker-item {
+		width: 100%;
+	}
+}

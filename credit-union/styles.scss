@@ -1,0 +1,372 @@
+// @use "icomoon";
+:root {
+    --dark-grey: #555;
+    --green: #1c8900;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--dark-grey);
+}
+
+a:link, a:visited {
+    color: var(--dark-grey);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dark-grey);
+}
+
+
+.main-header {
+    background-color: var(--green);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.85em;
+    & a:link,  & a:visited {
+        color: white;
+    }
+    a:hover {
+        background-color: var(--dark-grey);
+    }
+    // &__enroll
+}
+
+.top-nav {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    text-transform: uppercase;
+
+    li {
+        margin: 0.7em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+.navLogin {
+    display: flex;
+    & a:link,  & a:visited {
+        color: var(--green);
+        text-decoration: underline;
+    }
+    a:hover {
+        background-color: transparent;
+        text-decoration: none;
+    }
+    .eBranch {
+        font-size: 1em;
+        margin: 0.7em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+.logon {
+    position: relative;
+}
+ /* Here is the popup login form - hidden by default */
+.form-popup {
+  position: absolute;
+  right: 0px;
+  z-index: 9;
+  display:none;
+  background: #f2f2f2;
+  margin-bottom: 1em;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    padding: 0.5em;
+    width: 200px;
+    height: 3.2em;
+    border: transparent;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+}
+/* This is the style for the submit/login button */
+.form-container .btn {
+  background-color: #555759;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  margin-bottom:10px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* Add basic hover effects to buttons */
+.form-container .btn:hover, .btn:focus, .open-button:hover {
+  background-color: #fe620d;
+}
+
+/* Create a padlock image that floats to the right of the LOG IN text */
+.menu-padlock {
+  color: white;
+  position: relative;
+  z-index: 999;
+  top: 3px;
+  font-size: 20px;
+}
+
+/* Creates a box to close the login menu */
+ #close-menu {
+    color: #555759; 
+    width: 15%; 
+    height: 22%; 
+    position: absolute; 
+    top: -24%; 
+    right: 0.5%;
+    border-radius: 2px;
+ }
+
+/* Changes the color of the "X" for better user experience */
+ #close-menu:hover {
+    color: #fe620d;
+    cursor:pointer;
+ }
+
+/* Creates a text alignment for "Forgot username or password?" and "Register for online banking"*/
+ .textAlignment {
+    text-align: left;
+    color: #1c8900;
+   	font-size: 12px;
+    margin-left: 15px
+ }
+
+#enrollToday {
+	right: 252px;
+	text-transform: none;
+	background: #1c8900;
+  border-top: 1px solid #24b200;
+	width: 102px;
+}
+
+#enrollToday:hover, #enrollToday:focus {
+    background-color: #555759;
+    border-top: 1px solid #24b200;
+    margin-top: 0;
+}
+
+/*This will align the enroll today with the login menu*/
+	@media (min-width: 961px) and (max-width: 1150px) {
+		#enrollToday {
+    		right: 272px;
+	}
+}
+
+
+
+div.banner {
+    background: url(https://cdn.iccu.com/inc/uploads/2022/02/mortgage-construction-slider.jpg) center center;
+    // width: 1420px;
+    position: relative;
+    height: 600px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+h1.home-heading {
+    display: none;
+}
+div.banner-content {
+    text-align: center;
+    padding: 70px 0;
+    color: #fff;
+    line-height: 3rem;
+    h3 {
+        font-weight: lighter;
+        letter-spacing: 0.15em;
+    }
+    h2 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    a.banner__learn-more {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+        border-radius: 30px;
+        padding: 8px 20px;
+    }
+    a.banner__learn-more:hover {
+        background-color: white;
+        color: var(--dark-grey)
+    }
+}
+
+.white-section__hump {
+    background: url(https://cdn.iccu.com/wp-content/uploads/2018/04/whiteHump.png) center center no-repeat;
+    position: absolute;
+    z-index: 99;
+    width: 198px;
+    height: 47px;
+    left: 50%;
+    margin-left: -99px;
+    margin-top: -173px;
+    cursor: pointer;
+}
+
+.white-section__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 130px;
+    justify-content: space-evenly;
+    color: var(--green);
+    div.slim-col {
+        flex-basis: 200px;
+        p {
+            font-size: 1.1em;
+            height: 155px;
+            & a:link,  & a:visited {
+                color: var(--green);
+                text-decoration: underline;
+            }
+        }
+        h3 {
+            height: 85px;
+            font-size: 1.8rem;
+            font-weight: lighter;
+        }
+        a.btn {
+            background: transparent;
+            color: #fe620d;
+            border: 2px solid #fe620d;
+            border-radius: 30px;
+            padding: 10px 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        a.btn:hover {
+            background-color: #fe620d;
+            color: white;
+        }
+    }
+}
+
+
+
+// GREEN SECTION
+.green-section {
+    background-image: url("https://www.iccu.com/wp-content/uploads/2018/04/shutterstock_179752877_reduced_green.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.green-section__hump {
+    background: url(https://www.iccu.com/wp-content/uploads/2018/04/greenHump.png) center center no-repeat;
+    position: absolute;
+    z-index: 99;
+    width: 198px;
+    height: 47px;
+    left: 50%;
+    margin-left: -99px;
+    margin-top: -43px;
+    cursor: pointer;
+}
+.green-section__content {
+    background-color: #1b890049;
+    color: white;
+    text-align: center;
+    padding-top: 120px;
+    h2 {
+        font-size: 2.1em;
+        font-weight: lighter;
+        letter-spacing: 4px;
+    }
+}
+.rates {
+    text-align: center;
+    color: white;
+    padding: 100px;
+    [class *="rates__content-"] {
+        display: none;
+        text-transform: uppercase;
+        p {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+    [class *="rates__radio-"] {
+        display: none;
+    }
+    &__radio-visa:checked ~ &__content-visa {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    &__radio-mortgage:checked ~ &__content-mortgage {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    &__radio-auto:checked ~ &__content-auto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    &__radio-savings:checked ~ &__content-savings {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .flex-rate {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        justify-content: center;
+        label {
+            width: 120px;
+            height: 120px;
+        }
+        label:hover, .active{
+            background: url(https://www.iccu.com/template/library/images/down-arrow.svg) no-repeat bottom center #fff;
+            color: #1c8900;
+            border-radius: 100%;
+            background-size: 30px;
+            cursor: pointer;
+        }
+    }
+    .main-content {
+        font-weight: lighter;
+        p {
+            font-size: 3.2em;
+        }
+        h4 {
+            font-size: 12px;
+            font-weight: lighter;
+        }
+        h3 {
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding: 5px;
+    height: 30px;
+    background-color: var(--dark-grey);
+    color: white;
+}
+
+

@@ -1,0 +1,229 @@
+/* Spring animation */
+@-webkit-keyframes spring {
+  0% {
+    transform: scale3d(0.9, 0.9, 1);
+  }
+  33% {
+    transform: scale3d(1.2, 1.2, 1);
+  }
+  66% {
+    transform: scale3d(1.05, 1.05, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes spring {
+  0% {
+    transform: scale3d(0.9, 0.9, 1);
+  }
+  33% {
+    transform: scale3d(1.2, 1.2, 1);
+  }
+  66% {
+    transform: scale3d(1.05, 1.05, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* reveal the text animation */
+@-webkit-keyframes revealText {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes revealText {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+/* SVG POSITIONING */
+/* The popup notification structure */
+/* POPUP on hover */
+/* Screen width needs to be at least 1201px to be able to see popup bubble. */
+@media (max-width: 479px) {
+  #header-section svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  #header-section {
+    position: relative;
+    height: 702px;
+    margin-top: -30px;
+    overflow: hidden;
+  }
+  #header-section > .illustration-wrapper {
+    border-bottom-width: 10px;
+    position: absolute;
+    bottom: 0;
+    left: calc((100vw - 2560px) / 2);
+    padding-top: 65px;
+    height: 645px;
+    width: 2560px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1023px) {
+  #header-section > .illustration-wrapper {
+    left: calc((100vw - 2560px + 200px) / 2);
+  }
+}
+@media (min-width: 1024px) and (min-width: 1768px) {
+  #header-section > .illustration-wrapper {
+    left: calc((100vw - 2560px) / 2);
+  }
+}
+@media (min-width: 1024px) {
+  #header-section > .illustration-wrapper .header-bg {
+    position: absolute;
+    height: 645px;
+    width: 2560px;
+    bottom: 0;
+  }
+  #header-section > .illustration-wrapper .header-bg svg {
+    height: 645px;
+    width: 2560px;
+  }
+  #header-section > .illustration-wrapper .notification-zone {
+    position: absolute;
+    padding-bottom: 74px;
+    padding-left: 37px;
+    padding-right: 37px;
+    z-index: 10;
+  }
+  #header-section > .illustration-wrapper .notification-zone.no-padding-left {
+    padding-left: 0;
+  }
+  #header-section > .illustration-wrapper .notification-zone.no-padding-right {
+    padding-right: 0;
+  }
+  #header-section > .illustration-wrapper .notification {
+    padding: 8px;
+    padding-top: 21px;
+    position: relative;
+    transition: opacity 0.2s ease-in, top 0.2s ease-in;
+    top: 16px;
+    opacity: 0;
+    line-height: 21px;
+  }
+  #header-section > .illustration-wrapper .notification > svg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-filter: drop-shadow(0 3px 24px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 3px 24px rgba(0, 0, 0, 0.25));
+  }
+  #header-section > .illustration-wrapper .notification .box-icon {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.2s ease-out 0.3s;
+    width: 10px;
+    height: 10px;
+  }
+  #header-section > .illustration-wrapper .notification .box-icon img {
+    max-width: 100%;
+    height: auto;
+  }
+  #header-section > .illustration-wrapper .notification .text {
+    display: block;
+    z-index: 2;
+    position: relative;
+    font-size: 13px;
+    bottom: -2px;
+  }
+  #header-section > .illustration-wrapper .notification .text:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 101%;
+    width: 101%;
+    z-index: 2;
+    background: #fff;
+  }
+  #header-section > .illustration-wrapper .notification.reversed > svg {
+    transform: scaleX(-1);
+  }
+  #header-section > .illustration-wrapper .notification.deliveries-scanned {
+    padding-top: 20px;
+  }
+  #header-section .notification.active {
+    opacity: 1;
+    top: 0;
+    -webkit-animation: 0.5s spring ease-in;
+    animation: 0.5s spring ease-in;
+    will-change: transform;
+  }
+  #header-section .notification.active .box-icon {
+    opacity: 1;
+  }
+  #header-section .notification.active .text {
+    border: none;
+    box-shadow: none;
+  }
+  #header-section .notification.active .text:after {
+    -webkit-animation: 0.6s revealText 0.6s ease forwards;
+    animation: 0.6s revealText 0.6s ease forwards;
+    will-change: width;
+    border: none;
+    box-shadow: none;
+  }
+  #header-section .notification-zone:hover .notification .box-icon {
+    opacity: 1;
+    opacity: 1;
+  }
+  #header-section .notification-zone:hover .notification .text {
+    border: none;
+    box-shadow: none;
+  }
+  #header-section .notification-zone:hover .notification .text:after {
+    -webkit-animation: 0.6s revealText 0.6s ease forwards;
+    animation: 0.6s revealText 0.6s ease forwards;
+    will-change: width;
+    border: none;
+    box-shadow: none;
+    -webkit-animation: 0.6s revealText 0.3s ease forwards;
+    animation: 0.6s revealText 0.3s ease forwards;
+  }
+}
+#header-section .notification-zone:hover .notification {
+  opacity: 1;
+  top: 0;
+  -webkit-animation: 0.5s spring ease-in;
+  animation: 0.5s spring ease-in;
+  will-change: transform;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  #header-section > .illustration-wrapper .header-bg {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  #header-section > .illustration-wrapper .header-bg svg {
+    width: 175vw;
+    height: auto;
+  }
+}
+@media (max-width: 1200px) {
+  #header-section .notification-zone {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idaho Credit Union</title>
+    <link rel="stylesheet" id="icomoon-css" type="text/css" href="https://www.iccu.com/template/library/css/icomoon.css" media="all">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="closeForm()">
+    <header class="main-header">
+        <nav id="topMenu" class="upperclass" role="menu" aria-label="User Menu">
+            <ul id="menu-top-menu" class="nav top-nav cf">
+                <li class="menu-item"><a href="become-a-member">Join</a></li>
+                <li class="menu-item"><a href="rates">Rates</a></li>
+                <li class="menu-item"><a href="contact-us">Contact</a></li>
+                <li class="menu-item"><a href="branches-atms">Locations</a></li>
+                <li class="menu-item"><a target="_blank" rel="noopener" href="https://iccu.everfi-next.net/" aria-labelledby="menu-item-11140" title="By clicking this link you will be leaving iccu.com and going to a third-party website.">Education</a></li>
+                <li class="menu-item"><a href="careers">Careers</a></li>
+                <li class="menu-item"><a href="espanol">Espanol</a></li>
+            </ul>
+        </nav>
+
+        <div id="ebranch-login" class="navLogin">
+            <div class="eBranch" onclick="openForm()">
+                eBranch Login
+            </div>
+            <div class="logon" aria-label="eBranch Login">
+               <form action="#" method="post" enctype="application/x-www-form-urlencoded" class="form-container" name="ebranchLogin" autocomplete="off">
+                    <div>
+                        <input aria-label="username" onkeydown="openForm()" onclick="openForm()" id="ebranch-login-username" type="text" placeholder="Username" name="UserName">
+                    </div>
+                    <div class="form-popup" id="ebranch-login-dropdown">
+                        <input aria-label="password" type="password" id="ebranch-login-password" placeholder="Password" name="Password">
+                        <div class="login-button">
+                            <button aria-label="log in to eBranch" type="submit" id="ebranch-login-btn" class="btn"><span class="icon-padlock small-icon menu-padlock"></span>LOG IN</button>
+                        </div>
+                        <p aria-label="forgot username or password" id="ebranch-login-forgot" class="textAlignment">Forgot <a href="#" title="By clicking this link you will be leaving iccu.com and going to a third-party website.">Username</a> or <a href="#" title="By clicking this link you will be leaving iccu.com and going to a third-party website.">Password</a>?</p>
+                        <p aria-label="Register" class="textAlignment"><a onfocusout="closeForm()" href="#" title="By clicking this link you will be leaving iccu.com and going to a third-party website.">Register for Online Banking</a></p>
+                        <div aria-label="close" id="close-menu" onclick="closeForm()">
+                            <p>X</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="banner">
+            <h1 class="home-heading">Idaho Central Credit Union</h1>
+            <img src="https://www.iccu.com/template/library/images/iccu-logo.png" alt="Idaho Central Credit Union">
+            <div class="banner-content">
+                <h3>&#8212;Dream Loans foe Dream Homes&#8212;</h3>
+                <h2>Build It. Buy It.<br> Better It.</h2>
+                <h3>&#8212;Construction &#183; Mortgage &#183; HELOC&#8212;</h3>
+                <a href="#" class="btn banner__learn-more">Learn More</a>
+            </div>
+        </div>
+
+
+        <section class="white-section">
+            <div class="white-section__hump">
+            </div>
+
+            <div class="white-section__content">
+                <div class="slim-col">
+                    <span class="icon-user large-icon"></span>
+                    <h3>Become a Member</h3>
+                    <p>Want to join the premier Credit Union in Idaho? Want to enjoy the most convenient and exceptional service you expect from your financial institution?</p>
+                    <a href="#" class="btn">Join Today</a>
+                </div>
+                <div class="slim-col">
+                    <span class="icon-mobile-device large-icon"></span>
+                    <h3>VideoChat</h3>
+                    <p>Talk face-to-face with a live service agent through your mobile device or desktop. It’s secure and easy to use. <a href="#">Learn More</a></p>
+                    <a href="#" class="btn">Videochat</a>
+                </div>
+                <div class="slim-col">
+                    <span class="icon-house large-icon"></span>
+                    <h3>Apply for a Loan</h3>
+                    <p>Loans for any purpose in your life. ICCU can help you build the house of your dreams, buy the car you’ve always wanted or even grow your business.</p>
+                    <a href="#" class="btn">Apply Today</a>
+                </div>
+                <div class="slim-col">
+                    <span class="icon-idaho large-icon"></span>
+                    <h3>Learn More About ICCU</h3>
+                    <p>Idaho Central Credit Union’s mission is “Helping members achieve financial success.” This is the very core of what we do every day.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="green-section">
+            <div class="green-section__hump">
+            </div>
+
+            <div class="green-section__content">
+                <h2>DAILY RATES</h2>
+
+                <div class="rates">
+                    <div class="flex-rate" id="label-id">
+                        <label class="highlight active" for="visa"><span class="icon-credit-card medium-icon"></span><br>VISA</label>
+                        <label class="highlight" for="mortgage"><span class="icon-house medium-icon"></span><br>MORTGAGE</label>
+                        <label class="highlight" for="auto"><span class="icon-automobile medium-icon"></span><br>AUTO</label>
+                        <label class="highlight" for="savings"><span class="icon-cents medium-icon"></span><br>SAVINGS</label>
+                    </div>
+
+                    <input type="radio" id="visa" name="rates" class="rates__radio-visa" checked>
+                    <input type="radio" id="mortgage" name="rates" class="rates__radio-mortgage">
+                    <input type="radio" id="auto" name="rates" class="rates__radio-auto">
+                    <input type="radio" id="savings" name="rates" class="rates__radio-savings"><br><br><br><br><br><br>
+
+                    <div class="rates__content-visa">
+                        <div class="main-content">
+                            <h3>PREMIER REWARDS</h3><br>
+                            <h4>AS LOW AS</h4>
+                            <p>12.74%</p>
+                            <h3>VARIABLE APR</h3>
+                        </div>
+                        <div class="main-content">
+                            <h3>REWARDS</h3><br>
+                            <h4>AS LOW AS</h4>
+                            <p>8.74%</p>
+                            <h3>VARIABLE APR</h3>
+                        </div>
+                        <div class="main-content">
+                            <h3>VARIABLE PLATINUM</h3><br>
+                            <h4>AS LOW AS</h4>
+                            <p>7.74%</p>
+                            <h3>VARIABLE APR</h3>
+                        </div>
+                        <div class="main-content">
+                            <h3>FIXED PLATINUM</h3><br>
+                            <h4>AS LOW AS</h4>
+                            <p>13.99%</p>
+                            <h3>FIXED APR</h3>
+                        </div>
+                    </div>
+
+                    <div class="rates__content-mortgage">
+                        <div class="main-content">
+                            <h4>AS LOW AS</h4>
+                            <p>3.125%</p>
+                            <h3>15 YEAR FIXED RATE - PURCHASE</h3>
+                            <p>3.408%APR</p>
+                        </div>
+                        <div class="main-content">
+                            <h4>AS LOW AS</h4>
+                            <p>3.125%</p>
+                            <h3>15 YEAR FIXED RATE - REFINANCE</h3>
+                            <p>3.408%APR</p>
+                        </div>
+                        <div class="main-content">
+                            <h4>AS LOW AS</h4>
+                            <p>3.875%</p>
+                            <h3>30 YEAR FIXED RATE - PURCHASE</h3>
+                            <p>4.039%APR</p>
+                        </div>
+                        <div class="main-content">
+                            <h4>AS LOW AS</h4>
+                            <p>3.875%</p>
+                            <h3>30 YEAR FIXED RATE - REFINANCE</h3>
+                            <p>4.039%APR</p>
+                        </div>
+                    </div>
+
+                    <div class="rates__content-auto">
+                        <div class="main-content">
+                            <h4>AS LOW AS</h4>
+                            <p>2.190%</p>
+                            <h3>36 MONTH APR</h3>
+                            <h3>2019 OR NEWER</h3>
+                        </div>
+                        <div class="main-content">
+                            <h4>AS LOW AS</h4>
+                            <p>2.640%</p>
+                            <h3>48 MONTH APR</h3>
+                            <h3>2019 OR NEWER</h3>
+                        </div>
+                        <div class="main-content">
+                            <h4>AS LOW AS</h4>
+                            <p>2.590%</p>
+                            <h3>36 MONTH APR</h3>
+                            <h3>2016-2018</h3>
+                        </div>
+                        <div class="main-content">
+                            <h4>AS LOW AS</h4>
+                            <p>2.840%</p>
+                            <h3>48 MONTH APR</h3>
+                            <h3>2016-2018</h3>
+                        </div>
+                    </div>
+
+                    <div class="rates__content-savings">
+                        <div class="main-content">
+                            <h4>UP TO</h4>
+                            <p>0.050%APY</p><br>
+                            <h3>SHARE SAVINGS</h3>
+                        </div>
+                        <div class="main-content">
+                            <h4>UP TO</h4>
+                            <p>0.150%APY</p><br>
+                            <h3>YOUTH SAVINGS</h3>
+                        </div>
+                        <div class="main-content">
+                            <h4>UP TO</h4>
+                            <p>0.150%APY</p><br>
+                            <h3>MONEY MARKET SAVINGS</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        By Ozonuwe Glory for Advanced CSS (WDD 331) | BYUI Winter 2022
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

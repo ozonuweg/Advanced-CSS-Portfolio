@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+// Variables will be defined below
+// color variables
+$header-background-color: #6495ED;
+$header-text-color: #FAEBD7;
+$body-background-color: #FAEBD7;
+$body-link-color: #6495ED;
+$body-heading-color: black;
+$article-background-color: white;
+$active-link-color: #DEB887;
+$date-color: gray;
+
+// media queries variables
+$break-small: 599px;
+
+// font variables
+$header-font: 'Lora', serif;
+$body-font: Helvetica, Arial, sans-serif;
+
+
+// Mixins will be defined below
+@mixin center-item() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+
+// scss declarations
+body {
+    max-width: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-family: $header-font;
+    text-align: right; 
+    a {
+        color: $header-text-color;
+        text-decoration: none;
+    }   
+}
+
+h2 {
+    font-family: $header-font;
+    a {
+        color: $body-heading-color;
+        text-decoration: none;
+        &:active {
+            color: $active-link-color;
+        }
+        &:hover {
+            color: $body-link-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+p {
+    font-family: $body-font;
+    a {
+        color: $body-link-color;
+        text-decoration: none;
+        &:active {
+            color: $active-link-color;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+    line-height: 1.7rem;
+    li {
+        text-align: right;
+    }
+}
+
+header {
+    padding: 20px;
+    background-color: $header-background-color;
+}
+
+main {
+    background-color: $body-background-color;
+    padding: 20px;
+}
+
+article {
+    max-width: 700px;
+    margin: auto;
+    background-color: $article-background-color;
+    padding: 30px;
+    border-bottom: 35px solid $body-background-color;
+}
+
+figure {
+    padding-top: 30px;
+}
+
+img {
+    @include center-item;
+}
+
+nav {
+    a {
+        color: $header-text-color;
+        text-decoration: none;
+        &:active {
+            color: $active-link-color;
+        }
+        &:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+}
+
+div.post-date {
+    color: $date-color;
+}
+
+@media only screen and (min-width : $break-small) {
+    div {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+    }
+}
